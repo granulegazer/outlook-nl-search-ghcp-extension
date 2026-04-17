@@ -1,0 +1,38 @@
+{
+  "name": "outlook-nl-search-ghcp-extension",
+  "displayName": "Outlook Natural-Language Search (GHCP)",
+  "description": "Search your local Outlook emails using natural language inside GitHub Copilot Chat.",
+  "version": "0.1.0",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "AI",
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "chatParticipants": [
+      {
+        "id": "outlook-nl-search.search",
+        "name": "outlook-search",
+        "fullName": "Outlook Email Search",
+        "description": "Search your local Outlook emails using natural language. Example: find emails from Alice about Q1 budget last month",
+        "isSticky": false
+      }
+    ]
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "lint": "eslint src --ext ts",
+    "pretest": "npm run compile",
+    "vscode:prepublish": "npm run compile"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/vscode": "^1.90.0",
+    "typescript": "^5.4.0"
+  }
+}

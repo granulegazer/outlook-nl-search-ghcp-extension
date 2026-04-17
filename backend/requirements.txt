@@ -1,0 +1,14 @@
+# Python backend dependencies
+# Install with: pip install -r backend/requirements.txt
+
+# MAPI/COM access (Windows only)
+pywin32>=306; sys_platform == "win32"
+
+# Semantic embeddings
+sentence-transformers>=2.7.0
+
+# Vector index (inner-product / cosine search)
+faiss-cpu>=1.8.0
+
+# Numerical computing (transitive, but pinned for stability)
+numpy>=1.26.0
